@@ -93,9 +93,6 @@ parentBlock.appendChild(wrapper);
 
 
 
-
-
-
 /* switch */
 const menuList = document.createElement('div');
 menuList.className = "menuList";
@@ -127,18 +124,25 @@ list.src = '/assets/list.png';
 menuIcons.appendChild(list);
 
 
+// родительский блок для карточек 
+const container = document.createElement('div'); 
+container.className = "cards";
+wrapper.appendChild(container);
+
+
+
 gridView(); 
 
 menu.addEventListener('click', gridView);
 
 function gridView(){
 
-// родительский блок для карточек 
-const container = document.createElement('div'); 
-container.className = "cards";
-wrapper.appendChild(container);
+    container.innerHTML = ""; 
+    
 
-container.innerHTML = "";
+
+
+
 
     for (let i = 0; i<developers.length; i++){
 
@@ -231,14 +235,8 @@ list.addEventListener('click', tableView);
 
 function tableView(){
 
-   
-
-
-    const container = document.createElement('div'); 
-    container.className = "cards_table";
-    wrapper.appendChild(container);
- 
-    container.innerHTML = "";
+    
+    container.innerHTML = ""; 
 
     /* head of table */
     const head = document.createElement('div');
@@ -306,12 +304,6 @@ function tableView(){
     headRoomParagraph.className = 'headParagraph';
     headRoomText.appendChild(headRoomParagraph);
 
-    
-
-
-   
-
-
 
     for (let i = 0; i<developers.length; i++){
 
@@ -325,15 +317,11 @@ function tableView(){
         card.appendChild(avatar);
     
     
-    
-    
     // container with names and photos
         const cardName = document.createElement('div'); 
         cardName.className = "card__name_table";
         card.appendChild(cardName);
         
-    
-    
     
     
     // paragraph with eng name 
@@ -354,10 +342,6 @@ function tableView(){
         // rus names
         const developerRusName = document.createTextNode(`${developers[i].rusName+" "+developers[i].rusSurname}`); 
         cardRusName.appendChild(developerRusName);
-    
-    
-    
-       
        
     
         //div with department and room number
@@ -365,21 +349,15 @@ function tableView(){
         departmentRoomName.className = "department__room_table";
         card.appendChild(departmentRoomName);
     
-        
-    
     
         //department
         const depart = document.createElement('p');  
         depart.className = "department_table";
         departmentRoomName.appendChild(depart);
     
-    
-    
+
         const departmentNode = document.createTextNode(`${developers[i].department}`); 
         depart.appendChild(departmentNode);
-    
-    
-        
     
         const roomNumber = document.createElement('p');  //room
         roomNumber.className = "room_table";
