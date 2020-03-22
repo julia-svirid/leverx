@@ -374,12 +374,25 @@ function tableView(){
 /* Search */
 
 function search(){
+   
    let input = document.getElementById('input_id');
    let filter = input.value.toUpperCase();
-   let card = document.querySelector('.cards');
-   cards = card.querySelectorAll('.card__Eng');
+   let cards = document.querySelector('.cards');
+   card = cards.getElementsByClassName('card');
 
    for (let i = 0; i<card.length; i++){
-       user = card[i].getElementById
+       user = card[i].getElementsByClassName('card__name')[0];
+       txtValue = user.textContent || user.innerText;
+       if (txtValue.toUpperCase().indexOf(filter) > -1){
+           card[i].style.display = "";
+           
+       } else {
+            
+            card[i].style.display = "none";  
+       }
    }
 }
+
+const searchButton = document.querySelector('.search__button');
+
+searchButton.addEventListener('click', search);
