@@ -2,15 +2,15 @@
 
 const developers  =  [
     {
-      picture: '/assets/cat1.jpg' , 
+      picture: './assets/cat1.jpg' , 
       firstName: 'Dzmitry',
       lastName: 'Antonenka',
       rusName: 'Дмитрий',
       rusSurname: 'Антоненко',
       department: 'Web & Mobile',
       room: 1608,
-      bag: '/assets/bag.png',
-      door: '/assets/door.png',
+      bag: './assets/bag.png',
+      door: './assets/door.png',
     },
 
     {   
@@ -21,42 +21,42 @@ const developers  =  [
         rusSurname: 'Жуков',
         department: 'Web & Mobile',
         room: 1608,
-        bag: '/assets/bag.png',
-        door: '/assets/door.png',
+        bag: './assets/bag.png',
+        door: './assets/door.png',
         
     },
     {
-        picture: '/assets/cat3.jpg' ,
+        picture: './assets/cat3.jpg' ,
         firstName: 'Maxim',
         lastName: 'Podolsky',
         rusName: 'Максим',
         rusSurname: 'Подольский',
         department: 'Web & Mobile',
         room: 1608,
-        bag: '/assets/bag.png',
-        door: '/assets/door.png',
+        bag: './assets/bag.png',
+        door: './assets/door.png',
        
     },
-    {   picture: '/assets/cat4.jpg' ,
+    {   picture: './assets/cat4.jpg' ,
         firstName: 'Anna',
         lastName: 'Belova',
         rusName: 'Анна',
         rusSurname: 'Белова',
         department: 'Web & Mobile',
         room: 1608,
-        bag: '/assets/bag.png',
-        door: '/assets/door.png',
+        bag: './assets/bag.png',
+        door: './assets/door.png',
        
     },
-    {   picture: '/assets/cat5.jpg' ,
+    {   picture: './assets/cat5.jpg' ,
         firstName: 'Vitaly',
         lastName: 'Vlasov',
         rusName: 'Виталий',
         rusSurname: 'Власов',
         department: 'Web & Mobile',
         room: 1608,
-        bag: '/assets/bag.png',
-        door: '/assets/door.png',
+        bag: './assets/bag.png',
+        door: './assets/door.png',
         
     },
 
@@ -67,8 +67,8 @@ const developers  =  [
         rusSurname: 'Смирнов',
         department: 'Web & Mobile',
         room: 1608,
-        bag: '/assets/bag.png',
-        door: '/assets/door.png',
+        bag: './assets/bag.png',
+        door: './assets/door.png',
        
     },
   ];
@@ -115,12 +115,12 @@ menuList.appendChild(menuIcons);
 
 const menu = document.createElement('img');
 menu.className = 'menu';
-menu.src = '/assets/menu.png';
+menu.src = './assets/menu.png';
 menuIcons.appendChild(menu);
 
 const list = document.createElement('img');
 list.className = 'list';
-list.src = '/assets/list.png';
+list.src = './assets/list.png';
 menuIcons.appendChild(list);
 
 
@@ -246,7 +246,7 @@ function tableView(){
 
     const headPhoto = document.createElement('img');
     headPhoto.className = 'headPhoto';
-    headPhoto.src = '/assets/circle.png';
+    headPhoto.src = './assets/circle.png';
     head.appendChild(headPhoto);
 
     const headPhotoText = document.createElement('p');
